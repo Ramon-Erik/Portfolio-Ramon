@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Ubuntu:wght@300;400;500;700&display=swap');
 
 :root {
-    --cor-texto-gradient1: #1a076d;
-    --cor-texto-gradient2: #5b2268;
+    --cor-texto-gradient1: #5b2268;
+    --cor-texto-gradient2: #1a076d;
+    --cor-link-nav: rgba(255, 255, 255, .55);
     --cor2: #007fe0;
     --cor3: #000a27;
     --cor-tela-inicio: #000512;
@@ -37,11 +38,23 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 10;
+    padding: 15px 0;
+    background-color: var(--cor-tela-inicio);
 }
 
 nav ul {
     display: flex;
+    justify-content: center;
     gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor-link-nav);
+}
+.padding-t-nav {
+    padding-top: 50px;
 }
 
 /* tela de inicio */
@@ -66,7 +79,7 @@ nav ul {
     border-right: 4px solid rgba(255, 255, 255, .75);
     white-space: nowrap;
     overflow: hidden;
-    animation: digitando 2s steps(15), 
+    animation: digitando 2s 1s steps(15), 
                cursorPiscando .5s step-end infinite alternate;
 }
 
@@ -88,9 +101,8 @@ nav ul {
     }
 }
 
-#inicio img {
-    width: 80%;
-}
+#inicio .img-inicio { text-align: center; }
+#inicio img { width: 80%; }
 
 #inicio .icone-seta-baixo {
     position: absolute;
