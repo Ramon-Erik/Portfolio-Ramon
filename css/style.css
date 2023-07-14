@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Ubuntu:wght@300;400;500;700&display=swap');
 
 :root {
-    --cor1: #5b2268; /* strong */
-    --cor2: #007fe0; /* header */
-    --cor3: #000a27; /* footeer */
+    --cor-texto-gradient1: #1a076d;
+    --cor-texto-gradient2: #5b2268;
+    --cor2: #007fe0;
+    --cor3: #000a27;
+    --cor-tela-inicio: #000512;
     --fonte-principal: 'Poipins', sans-serif;
 }
 
@@ -28,4 +30,85 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* barra de navegação */
+nav {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+/* tela de inicio */
+#inicio {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--cor-tela-inicio);
+}
+
+#inicio .texto-inicio {
+    padding-left: 10px;
+    font-size: 1.8rem;
+    color: white;
+}
+
+#inicio .texto-inicio h1 {
+    font-family: monospace;
+    width: 10ch;
+    border-right: 4px solid rgba(255, 255, 255, .75);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: digitando 2s steps(15), 
+               cursorPiscando .5s step-end infinite alternate;
+}
+
+#inicio .texto-inicio h4 {
+    font-size: 1.45rem;
+    background-image: linear-gradient(to right, var(--cor-texto-gradient1), var(--cor-texto-gradient2));
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+@keyframes cursorPiscando {
+    50% {
+        border-color: transparent;
+    }
+}
+@keyframes digitando {
+    from {
+        width: 0;
+    }
+}
+
+#inicio img {
+    width: 80%;
+}
+
+#inicio .icone-seta-baixo {
+    position: absolute;
+    width: 40px;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rolarParaBaixo 2s infinite alternate;
+}
+
+@keyframes rolarParaBaixo {
+    from {
+        transform: translateY(-15%);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-15%);
+    }
 }
