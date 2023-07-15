@@ -5,7 +5,7 @@
     --cor-texto-gradient2: #1a076d;
     --cor-link-nav: rgba(255, 255, 255, .55);
     --cor2: #007fe0;
-    --cor3: #000a27;
+    --cor-traco-titulo: #0e0631;
     --cor-tela-inicio: #000512;
     --fonte-principal: 'Poipins', sans-serif;
 }
@@ -31,6 +31,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.titulos-tela {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.titulos-tela h4::before,
+.titulos-tela h4::after {
+    display: inline-block;
+    content: '';
+    width: 40px;
+    height: 4px;
+    margin: 5px;
+    border-radius: 8px;
+    background-color: var(--cor-traco-titulo);
 }
 
 /* barra de navegação */
