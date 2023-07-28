@@ -3,10 +3,11 @@
 :root {
     --cor-texto-gradient1: #5b2268;
     --cor-texto-gradient2: #1a076d;
-    --cor-link-nav: rgba(255, 255, 255, .55);
+    --cor-link-nav: #ffffff8c;
     --cor2: #007fe0;
     --cor-traco-titulo: #0e0631;
     --cor-tela-inicio: #000512;
+    --cor-footer: #000512;
     --fonte-principal: 'Poipins', sans-serif;
 }
 
@@ -20,6 +21,24 @@
 body {
     position: relative;
     font-family: var(--fonte-principal);
+}
+
+/* efeitos de animação no scroll */
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transition: all .7s;
+}
+
+.hidden-foto {
+    transform: translateX(-100%);
+}
+
+.shown {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 1s;
 }
 
 .tela-cheia {
@@ -58,13 +77,20 @@ nav {
     background-color: var(--cor-tela-inicio);
 }
 
-nav ul {
+nav ul, 
+footer ul {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-nav a {
+nav li,
+footer li {
+    list-style-type: none;
+}
+
+nav a, 
+footer a {
     text-decoration: none;
     font-weight: bold;
     color: var(--cor-link-nav);
@@ -139,4 +165,32 @@ nav a {
     to {
         transform: translateY(-15%);
     }
+}
+
+/* tela sobre */
+#sobre img {border-radius: 50%;}
+
+
+.conteudo-tela {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 668px;
+    padding: 20px;
+}
+
+.conteudo-tela .conteudo-texto {
+    max-width: 310px;
+    text-align: justify;
+    line-height: 1.59rem;
+}
+
+footer {
+    width: 100%;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    background-color: var(--cor-footer);
 }
