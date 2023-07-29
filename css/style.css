@@ -27,11 +27,12 @@ body {
 .hidden {
     opacity: 0;
     filter: blur(15px);
-    transition: all .7s;
+    transition: all 1s;
 }
 
 .hidden-foto {
     transform: translateX(-100%);
+    transition: all 1s;
 }
 
 .shown {
@@ -168,13 +169,16 @@ footer a {
 }
 
 /* tela sobre */
-#sobre img {border-radius: 50%;}
+#sobre {
+    min-height: 340px;
+}
 
+#sobre img {border-radius: 50%;}
 
 .conteudo-tela {
     display: flex;
     justify-content: space-evenly;
-    align-items: center;
+    /* align-items: center; */
     flex-wrap: wrap;
     margin: 0 auto;
     max-width: 668px;
@@ -184,7 +188,28 @@ footer a {
 .conteudo-tela .conteudo-texto {
     max-width: 310px;
     text-align: justify;
-    line-height: 1.59rem;
+    line-height: 1.3rem;
+    font-size: 1.12rem;
+}
+
+/* section de habilidades */
+#habilidades .conteudo-texto {
+    margin: 25px;
+}
+
+.hb {
+    padding: 10px;
+    padding-bottom: 5px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 7px;
+    box-shadow: 0px 1px 9px 2px #00000029;
+}
+
+.hb .nome-hb {
+    padding-top: 5px;
+    text-align: center;
+    font-weight: bold;
 }
 
 footer {
