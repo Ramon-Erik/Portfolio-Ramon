@@ -35,6 +35,24 @@ body {
     transition: all 1s;
 }
 
+.hidden-hb {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.cards-hb :nth-child(2) {
+    transition-delay: 400ms;
+}
+
+.cards-hb :nth-child(3) {
+    transition-delay: 700ms;
+}
+
+.cards-hb :nth-child(4) {
+    transition-delay: 1000ms;
+}
+
 .shown {
     opacity: 1;
     filter: blur(0);
@@ -178,7 +196,6 @@ footer a {
 .conteudo-tela {
     display: flex;
     justify-content: space-evenly;
-    /* align-items: center; */
     flex-wrap: wrap;
     margin: 0 auto;
     max-width: 668px;
@@ -197,7 +214,16 @@ footer a {
     margin: 25px;
 }
 
+.cards-hb {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
 .hb {
+    width: 86px;
+    height: 119px;
     padding: 10px;
     padding-bottom: 5px;
     margin: 10px;
@@ -212,10 +238,25 @@ footer a {
     font-weight: bold;
 }
 
+.hb-info p {text-align: center; transition: all .5s;}
+
 footer {
     width: 100%;
     padding: 15px;
     color: white;
     text-align: center;
     background-color: var(--cor-footer);
+}
+
+@media screen and (min-width: 788px) {
+    #habilidades .conteudo-tela {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+    .cards-hb {
+        width: 330px;
+    }
+    .hb-info {
+        width: 200px;
+    }
 }
