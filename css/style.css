@@ -113,7 +113,15 @@ footer a {
     text-decoration: none;
     font-weight: bold;
     color: var(--cor-link-nav);
+    transition: all .3s ease;
 }
+
+nav a:hover {
+    display: block;
+    color: white;
+    transform: scale(1.2);
+}
+
 .padding-t-nav {
     padding-top: 50px;
 }
