@@ -266,7 +266,7 @@ nav a:hover {
 .caixa-projeto {
     width: 250px;
     height: 310px;
-    border: 1.5px solid gray;
+    border: 2.5px solid var(--cor-texto-gradient1);
     border-radius: 9px;
     padding: 8px;
     margin: 9px;
