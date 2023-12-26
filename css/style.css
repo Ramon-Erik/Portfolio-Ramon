@@ -5,6 +5,7 @@
     --cor-texto-gradient2: #1a076d;
     --cor-link-nav: #ffffff8c;
     --cor2: #007fe0;
+    --cor-cinza: #333;
     --cor-traco-titulo: #0e0631;
     --cor-tela-inicio: #000512;
     --cor-footer: #000512;
@@ -96,7 +97,7 @@ nav {
     background-color: var(--cor-tela-inicio);
 }
 
-nav ul, 
+nav ul,
 footer ul {
     display: flex;
     justify-content: center;
@@ -108,7 +109,7 @@ footer li {
     list-style-type: none;
 }
 
-nav a, 
+nav a,
 footer a {
     text-decoration: none;
     font-weight: bold;
@@ -148,8 +149,8 @@ nav a:hover {
     border-right: 4px solid rgba(255, 255, 255, .75);
     white-space: nowrap;
     overflow: hidden;
-    animation: digitando 2s 1s steps(15), 
-               cursorPiscando .5s step-end infinite alternate;
+    animation: digitando 2s 1s steps(15),
+        cursorPiscando .5s step-end infinite alternate;
 }
 
 #inicio .texto-inicio h4 {
@@ -164,14 +165,20 @@ nav a:hover {
         border-color: transparent;
     }
 }
+
 @keyframes digitando {
     from {
         width: 0;
     }
 }
 
-#inicio .img-inicio { text-align: center; }
-#inicio img { width: 80%; }
+#inicio .img-inicio {
+    text-align: center;
+}
+
+#inicio img {
+    width: 80%;
+}
 
 #inicio .icone-seta-baixo {
     position: absolute;
@@ -186,9 +193,11 @@ nav a:hover {
     from {
         transform: translateY(-15%);
     }
+
     50% {
         transform: translateY(0);
     }
+
     to {
         transform: translateY(-15%);
     }
@@ -199,7 +208,9 @@ nav a:hover {
     min-height: 340px;
 }
 
-#sobre img {border-radius: 50%;}
+#sobre img {
+    border-radius: 50%;
+}
 
 .conteudo-tela {
     display: flex;
@@ -246,10 +257,13 @@ nav a:hover {
     font-weight: bold;
 }
 
-.hb-info p {text-align: center; transition: all .5s;}
+.hb-info p {
+    text-align: center;
+    transition: all .5s;
+}
 
 /* section de projetos */
-.caixa-projeto   {
+.caixa-projeto {
     width: 250px;
     height: 300px;
     border: 1.5px solid gray;
@@ -262,6 +276,49 @@ nav a:hover {
     height: 150px;
     margin: 3px 0 6px;
     background: var(--cor-traco-titulo);
+}
+
+.links-projeto {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.links-projeto a {
+    display: block;
+    margin-top: 7px;
+    padding: 5px;
+    text-decoration: none;
+    color: var(--cor-cinza);
+    border: 2px solid var(--cor-cinza);
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+}
+
+.links-projeto a span {
+    position: relative;
+    z-index: 2;
+}
+
+.links-projeto a:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--cor-texto-gradient1);
+    transition: all .35s;
+}
+
+.links-projeto a:hover {
+    color: #fff;
+}
+
+.links-projeto a:hover:after {
+    width: 100%;
 }
 
 footer {
@@ -277,9 +334,11 @@ footer {
         flex-wrap: nowrap;
         justify-content: space-between;
     }
+
     .cards-hb {
         width: 330px;
     }
+
     .hb-info {
         width: 200px;
     }
