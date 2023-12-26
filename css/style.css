@@ -265,7 +265,7 @@ nav a:hover {
 /* section de projetos */
 .caixa-projeto {
     width: 250px;
-    height: 300px;
+    height: 310px;
     border: 1.5px solid gray;
     border-radius: 9px;
     padding: 8px;
@@ -274,9 +274,13 @@ nav a:hover {
 
 .foto-projeto {
     width: 100%;
-    height: 150px;
+    height: 130px;
     margin: 3px 0 6px;
     background: var(--cor-traco-titulo);
+}
+
+.descricao-projeto {
+    height: 112px;
 }
 
 .links-projeto {
