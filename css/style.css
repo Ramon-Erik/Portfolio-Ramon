@@ -54,6 +54,10 @@ body {
     transition-delay: 1000ms;
 }
 
+.cards-hb :nth-child(5) {
+    transition-delay: 1300ms;
+}
+
 .shown {
     opacity: 1;
     filter: blur(0);
