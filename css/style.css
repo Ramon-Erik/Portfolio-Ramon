@@ -229,6 +229,11 @@ nav a:hover {
 }
 
 /* section de habilidades */
+
+#habilidades {
+    min-height: 340px;
+}
+
 #habilidades .conteudo-texto {
     margin: 25px;
 }
@@ -238,6 +243,10 @@ nav a:hover {
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
+}
+
+.cards-hb img {
+    width: 66px;
 }
 
 .hb {
