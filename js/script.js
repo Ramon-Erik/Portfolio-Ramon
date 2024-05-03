@@ -33,6 +33,8 @@ function infoHb(nomeHb) {
             return 'Habilidade de criar sites usando HTML5 e CSS3 para sites de diversos tipos.'
         case 'JS':
             return 'Habilidade de manipular o DOM e criar sites interativos!'
+        case 'PHP':
+            return 'Habilidade de esatabelecer conexão entre cliente e servidor através do pre-processamento de dados com PHP!'
         case 'GIT':
             return 'Capacidade de fazer o versionamento de códigos por meio de git e github.'
         default:
