@@ -219,6 +219,7 @@ nav a:hover {
 .conteudo-tela {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     flex-wrap: wrap;
     margin: 0 auto;
     max-width: 668px;
@@ -227,6 +228,7 @@ nav a:hover {
 
 .conteudo-tela .conteudo-texto {
     max-width: 310px;
+    height: fit-content;
     text-align: justify;
     line-height: 1.3rem;
     font-size: 1.12rem;
