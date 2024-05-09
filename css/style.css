@@ -295,6 +295,11 @@ nav a:hover {
     background: var(--cor-traco-titulo);
 }
 
+#projeto-reg {
+    background: url('../img/projetos/relogio.png');
+    background-position: center center;
+}
+
 .descricao-projeto {
     height: 112px;
 }
