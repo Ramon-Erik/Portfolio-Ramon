@@ -295,10 +295,23 @@ nav a:hover {
     background: var(--cor-traco-titulo);
 }
 
-/* #projeto-reg {
+#projeto-velha {
+    background: url('../img/projetos/velha.png');
+    background-position: top center;
+    background-size: cover;
+}
+
+#projeto-reg {
     background: url('../img/projetos/relogio.png');
     background-position: center center;
-}*/
+    background-size: cover;
+}
+
+#projeto-mej {
+    background: url('../img/projetos/mej.jpg');
+    background-position: center center;
+    background-size: cover;
+}
 
 .descricao-projeto {
     height: 112px;
