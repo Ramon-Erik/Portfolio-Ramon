@@ -39,6 +39,8 @@ function infoHb(nomeHb) {
             return 'Habilidade de esatabelecer conexão entre cliente e servidor através do pre-processamento de dados com PHP!'
         case 'GIT':
             return 'Capacidade de fazer o versionamento de códigos por meio de git e github.'
+        case 'MySQL':
+            return 'Habilidade de modelar e crar bancos de dados relacionais com MySQL'
         default:
             return 'Clique ou passe o mouse por cima de um card ;)'
     }
