@@ -1,3 +1,14 @@
 <app-header/>
-<app-knowledge/>
-<app-experiences/>
+<main>
+  <app-knowledge/>
+  <app-experiences/>
+  @defer (on viewport) {
+    <app-projects/>
+  } @placeholder {
+    <p>Veja os projetos que fiz...</p>
+  } @loading {
+    <p>Carregando...</p>
+  } @error {
+    <p>Erro ao carregar componente. Recarregue a página.</p>
+  }
+</main>

@@ -1,4 +1,4 @@
-export interface IKnowladge {
+export interface Knowladge {
   src: string;
   alt: string;
 }
