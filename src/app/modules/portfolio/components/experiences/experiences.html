@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Útimas Experiências</h2>
+  <mat-accordion>
+    @for (item of experiences(); track $index) {
+      <mat-expansion-panel hideToggle>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>{{item.title}}</h3>
+          </mat-panel-title>
+          <mat-panel-description>
+            {{item.description}}
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <div class="text" [innerHTML]="item.text"></div> 
+      </mat-expansion-panel>
+    }
+  </mat-accordion>
+</div>
