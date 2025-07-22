@@ -7,7 +7,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
   templateUrl: './experiences.html',
   styleUrl: './experiences.css'
 })
-export class Experiences {
+export class ExperiencesCopmponent {
   public experiences = signal([
     {
       title: "Estágio em Desenvolvimento Web na  Ótica Fênix",
