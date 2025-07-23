@@ -20,7 +20,7 @@
     </a>
     } @else {
     <button disabled="disabled" class="btn btn-primary">Repo. privado</button>
-    }
+    } @if (getData()?.links?.site?.url != "!") {
     <a
       [href]="getData()?.links?.site?.url"
       target="_blank"
@@ -28,5 +28,10 @@
     >
       {{ getData()?.links?.site?.text }}
     </a>
+    } @else {
+    <button disabled="disabled" class="btn btn-primary">
+      Site indisponível
+    </button>
+    }
   </nav>
 </mat-dialog-content>
