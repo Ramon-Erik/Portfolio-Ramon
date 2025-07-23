@@ -8,7 +8,7 @@ import { ProjectsComponent } from '../../components/projects/projects';
   selector: 'app-home',
   imports: [HeaderComponent, KnowledgeComponent, ExperiencesCopmponent, ProjectsComponent],
   templateUrl: './home.html',
-  styleUrl: './home.css'
+  styleUrl: './home.scss'
 })
 export class HomeComponent {
 
