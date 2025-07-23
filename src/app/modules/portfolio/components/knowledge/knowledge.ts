@@ -5,7 +5,7 @@ import { Knowladge } from '../../interface/knowledge.interface';
   selector: 'app-knowledge',
   imports: [],
   templateUrl: './knowledge.html',
-  styleUrl: './knowledge.css',
+  styleUrl: './knowledge.scss',
 })
 export class KnowledgeComponent {
   public knowledge = signal<Knowladge[]>([
