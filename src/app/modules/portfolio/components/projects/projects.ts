@@ -5,10 +5,64 @@ import { Projetect } from '../../interface/project.interface';
   selector: 'app-projects',
   imports: [],
   templateUrl: './projects.html',
-  styleUrl: './projects.css',
+  styleUrl: './projects.scss',
 })
 export class ProjectsComponent {
   public projects = signal<Projetect[]>([
+    {
+      title: '',
+      src: '',
+      alt: '',
+      width: '100px',
+      height: '51px',
+      description: '',
+      links: {
+        git: {
+          text: '',
+          url: ''
+        },
+        site: {
+          text: '',
+          url: ''
+        }
+      },
+    },
+    {
+      title: '',
+      src: '',
+      alt: '',
+      width: '100px',
+      height: '51px',
+      description: '',
+      links: {
+        git: {
+          text: '',
+          url: ''
+        },
+        site: {
+          text: '',
+          url: ''
+        }
+      },
+    },
+    {
+      title: '',
+      src: '',
+      alt: '',
+      width: '100px',
+      height: '51px',
+      description: '',
+      links: {
+        git: {
+          text: '',
+          url: ''
+        },
+        site: {
+          text: '',
+          url: ''
+        }
+      },
+    },
     {
       title: '',
       src: '',
