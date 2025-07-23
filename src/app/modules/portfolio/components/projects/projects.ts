@@ -1,85 +1,46 @@
-import { Component, signal } from '@angular/core';
-import { Projetect } from '../../interface/project.interface';
+import { Component, inject, signal } from '@angular/core';
+import { Project } from '../../interface/project.interface';
+
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { EDialogPanelClass } from '../../enum/EDialogPanelClass.enum';
+import { DialogProjects } from '../dialog/dialog-projects/dialog-projects';
 
 @Component({
   selector: 'app-projects',
-  imports: [],
+  imports: [MatDialogModule],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
 export class ProjectsComponent {
-  public projects = signal<Projetect[]>([
+  #dialog = inject(MatDialog)
+  public openDialog(data: Project) {
+    this.#dialog.open(
+      DialogProjects, {
+        data,
+        panelClass: EDialogPanelClass.PROJECTS
+      }
+    )
+  }
+
+  public projects = signal<Project[]>([
     {
-      title: '',
-      src: '',
-      alt: '',
+      title: 'Biblioteca MEJ',
+      src: 'https://mej-maranguape.vercel.app/mej.jpg',
+      alt: 'Imagem do site do MEJ',
       width: '100px',
       height: '51px',
-      description: '',
+      description: '<p>Site para administração da Biblioteca do MEJ</p>',
       links: {
         git: {
-          text: '',
-          url: ''
+          text: 'Repo. privado',
+          url: '!',
         },
         site: {
-          text: '',
-          url: ''
-        }
-      },
-    },
-    {
-      title: '',
-      src: '',
-      alt: '',
-      width: '100px',
-      height: '51px',
-      description: '',
-      links: {
-        git: {
-          text: '',
-          url: ''
+          text: 'Ver site',
+          url: 'https://mej-maranguape.vercel.app',
         },
-        site: {
-          text: '',
-          url: ''
-        }
       },
     },
-    {
-      title: '',
-      src: '',
-      alt: '',
-      width: '100px',
-      height: '51px',
-      description: '',
-      links: {
-        git: {
-          text: '',
-          url: ''
-        },
-        site: {
-          text: '',
-          url: ''
-        }
-      },
-    },
-    {
-      title: '',
-      src: '',
-      alt: '',
-      width: '100px',
-      height: '51px',
-      description: '',
-      links: {
-        git: {
-          text: '',
-          url: ''
-        },
-        site: {
-          text: '',
-          url: ''
-        }
-      },
-    },
+    
   ]);
 }

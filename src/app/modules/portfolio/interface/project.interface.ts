@@ -1,4 +1,4 @@
-export interface Projetect {
+export interface Project {
   title: string;
   src: string;
   alt: string;

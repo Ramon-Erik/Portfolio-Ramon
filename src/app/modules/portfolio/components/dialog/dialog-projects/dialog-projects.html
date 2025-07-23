@@ -1,0 +1,32 @@
+<header>
+  <h2 mat-dialog-title>{{ getData()?.title }}</h2>
+
+  <button (click)="closeModal()">
+    <img src="assets/icons/dialog/close.svg" alt="Botão para fechar o dialog" />
+  </button>
+</header>
+
+<mat-dialog-content>
+  <article [innerHTML]="getData()?.description"></article>
+
+  <nav>
+    @if (getData()?.links?.git?.url != "!") {
+    <a
+      [href]="getData()?.links?.git?.url"
+      target="_blank"
+      class="btn btn-primary"
+    >
+      {{ getData()?.links?.git?.text }}
+    </a>
+    } @else {
+    <button disabled="disabled" class="btn btn-primary">Repo. privado</button>
+    }
+    <a
+      [href]="getData()?.links?.site?.url"
+      target="_blank"
+      class="btn btn-primary"
+    >
+      {{ getData()?.links?.site?.text }}
+    </a>
+  </nav>
+</mat-dialog-content>
