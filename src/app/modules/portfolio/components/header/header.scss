@@ -78,15 +78,17 @@
       }
     }
   }
-}
 
-@media (max-width: 750px) {
-  section {
-    flex-direction: column;
-    gap: 15px;
-  }
-  aside nav ul li a,
-  section figure {
-    width: 100%;
+  @media (max-width: 450px) {
+    section {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    aside nav ul li,
+    aside nav ul li a,
+    aside section figure {
+      width: 100%;
+    }
   }
 }
