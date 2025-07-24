@@ -25,10 +25,10 @@ export class ProjectsComponent {
   public projects = signal<Project[]>([
     {
       title: 'Biblioteca MEJ',
-      src: 'https://mej-maranguape.vercel.app/mej.jpg',
+      src: '/assets/img/projects/logo-biblioteca.png',
       alt: 'Imagem do site do MEJ',
-      width: '100px',
-      height: '51px',
+      width: '200px',
+      height: '150px',
       description: '<p>Site para administração da Biblioteca do MEJ</p>',
       links: {
         git: {
