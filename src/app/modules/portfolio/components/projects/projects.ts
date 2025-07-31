@@ -45,8 +45,8 @@ export class ProjectsComponent {
       title: 'Today Do',
       src: '/assets/img/projects/logo-todo.png',
       alt: 'Imagem do nome do site do todo list',
-      width: '400px',
-      height: '350px',
+      width: '200px',
+      height: '150px',
       description: '<p>Site para administração da Biblioteca do MEJ</p>',
       links: {
         git: {
