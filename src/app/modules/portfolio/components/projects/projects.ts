@@ -41,6 +41,23 @@ export class ProjectsComponent {
         },
       },
     },
-    
+    {
+      title: 'Today Do',
+      src: '/assets/img/projects/logo-todo.png',
+      alt: 'Imagem do nome do site do todo list',
+      width: '400px',
+      height: '350px',
+      description: '<p>Site para administração da Biblioteca do MEJ</p>',
+      links: {
+        git: {
+          text: 'Repositório',
+          url: 'https://github.com/Ramon-Erik/to-do-list-local-storaged',
+        },
+        site: {
+          text: 'Ver site',
+          url: 'https://today-do.vercel.app',
+        },
+      },
+    },
   ]);
 }
