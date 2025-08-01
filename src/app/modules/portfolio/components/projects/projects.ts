@@ -47,7 +47,7 @@ export class ProjectsComponent {
       alt: 'Imagem do nome do site do todo list',
       width: '200px',
       height: '150px',
-      description: '<p>Site para administração da Biblioteca do MEJ</p>',
+      description: '<p>Site para anotar de forma online suas tarefas e gerenciar seu estado (feita ou para fazer)</p>',
       links: {
         git: {
           text: 'Repositório',
